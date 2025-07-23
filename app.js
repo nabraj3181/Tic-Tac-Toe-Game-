@@ -1,5 +1,9 @@
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#resetBtn");
+let newbtn = document.querySelector("#newbtn");
+let msgcontainer = document.querySelector(".msg-container");
+let msg = document.querySelector("#msg");
+
 
 
 let turn0 = true;//plalyer x;i.e player 0
@@ -17,21 +21,73 @@ const winpatterns = [
 ];
 
 
-boxes.forEach((box)=>{
-    box.addEventListener("click",()=>{
+boxes.forEach((box) => {
+    box.addEventListener("click", () => {
 
-        if (turn0){
-            box.innerText="0";
-            turn0=false;
+        if (turn0) {
+            box.innerText = "0";
+            turn0 = false;
 
         }
 
         else {
-            box.innerText="x";
-            turn0=true;
-            
+            box.innerText = "x";
+            turn0 = true;
+
 
         }
-        
+        box.disabled = true;
+
+        checkwinner();
     });
 });
+
+const disablebox=()=>
+{
+    for(box of boxes)
+    { 
+        box.disabled=true;
+    }
+}
+
+
+const showwinner = (posval1) => {
+    msg.innerText = `Congratulations. Winner is  ${posval1}`
+    msgcontainer.classList.remove("hide");
+    disablebox();
+
+
+
+
+};
+
+
+
+
+
+const checkwinner = () => {
+    for (let pattern of winpatterns) {
+        let posval1 = boxes[pattern[0]].innerText;
+        let posval2 = boxes[pattern[1]].innerText;
+        let posval3 = boxes[pattern[2]].innerText;
+
+        if (posval1 != "" && posval2 != "" && posval3 != "") {
+            if (posval1 === posval2 && posval2 === posval3)
+                console.log("Winner!!");
+
+
+            showwinner(posval1);
+
+
+        }
+
+
+    }
+}
+
+const resetgame=()={
+
+    turn0=0;
+    enablebox();
+    
+}
