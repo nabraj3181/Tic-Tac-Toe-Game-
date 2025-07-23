@@ -1,50 +1,52 @@
-*{
-    margin:0px;
-    padding:0px;
-
-}
-body{
-    background-color:grey;
-    text-align:center;
+* {
+    margin: 0px;
+    padding: 0px;
 
 }
 
-.container{
-    height:70vh;
-   display:flex;
-    justify-content:center;
-    align-items: center ;
-    
-}
-
-.game{
-    height:60 vmin;
-    width:60vmin;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items: center ;
-    gap:1.5vmin;
+body {
+    background-color: grey;
+    text-align: center;
 
 }
-.box{
-    height:18vmin;
-    width:18vmin;
-    border-radius:1 rem;
-    border:none;
-    box-shadow: 0 0  1 rem rgba(0,0,0,0.3);
-    font-size:8vmin;
-    color:#b0413e;
-    background-color:yellowgreen;
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-#resetbtn{
+.game {
+    height: 60 vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
 
-    padding:3 rem;
-    font-size:2rem;
-    background-color:black;
-    border-radius:1rem;
-    color:white;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1 rem;
+    border: none;
+    box-shadow: 0 0 1 rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: yellowgreen;
+}
+
+#resetbtn {
+
+    padding: 3 rem;
+    font-size: 2rem;
+    background-color: black;
+    border-radius: 1rem;
+    color: white;
 
 
 
@@ -52,24 +54,26 @@ body{
 
 
 #msg {
-    color:red;
-    font-size:9vmin;
+    color: red;
+    font-size: 9vmin;
 
 
 }
 
-#newbtn{
-    padding:3 rem;
-    font-size:2rem;
-    background-color:black;
-    border-radius:1rem;
-    color:white;
+#newbtn {
+    padding: 3 rem;
+    font-size: 2rem;
+    background-color: black;
+    border-radius: 1rem;
+    color: white;
 }
-.msg-container{
-    height:100vmin;
-    /* display:flex;
+
+.msg-container {
+    height: 100vmin;
+    display:flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    flex-direction:column;
 
 
 
@@ -77,6 +81,6 @@ body{
 
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }

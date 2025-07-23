@@ -4,8 +4,6 @@ let newbtn = document.querySelector("#newbtn");
 let msgcontainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-
-
 let turn0 = true;//plalyer x;i.e player 0
 
 
@@ -74,10 +72,6 @@ const showwinner = (winnerr) => {
 
 };
 
-
-
-
-
 const checkwinner = () => {
     for (let pattern of winpatterns) {
         let posval1 = boxes[pattern[0]].innerText;
@@ -100,6 +94,7 @@ const checkwinner = () => {
 const resetgame=()=>{
 
     turn0=true ;
+
     enablebox();
     msgcontainer.classList.add("hide");
     
